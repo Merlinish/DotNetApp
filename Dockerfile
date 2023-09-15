@@ -25,6 +25,8 @@ RUN dotnet restore
 
 RUN dotnet build
 
+RUN docker tag dotnetsample hejianqiao99/dotnetsample
+
 EXPOSE 5000:5000
 
 CMD [ "dotnet", "run" ]
