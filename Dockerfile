@@ -19,8 +19,8 @@ RUN apt-get update
 
 RUN echo "deb http://security.debian.org/debian-security jessie/updates main" >> /etc/apt/sources.list
 
-RUN sudo apt-get update -y && apt-get install -y --no-install-recommends \
-    libssl1.0.0
+RUN sudo apt-get update -y 
+RUN sudo apt-get install -y --no-install-recommends libssl1.0.0
 
 RUN sudo apt install dotnet-sdk-3.1
 
