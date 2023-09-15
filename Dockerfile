@@ -17,9 +17,10 @@ RUN apt install apt-transport-https -y
 
 RUN apt-get update
 
-RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu57_57.1-6+deb9u4_amd64.deb
+RUN echo "deb http://security.debian.org/debian-security jessie/updates main" >> /etc/apt/sources.list
 
-RUN sudo dpkg -i libicu57_57.1-6+deb9u4_amd64.deb
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
+    libssl1.0.0
 
 RUN sudo apt install dotnet-sdk-3.1
 
