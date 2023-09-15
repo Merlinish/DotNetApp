@@ -17,7 +17,7 @@ RUN apt install apt-transport-https -y
 
 RUN apt-get update
 
-
+RUN apt install dotnet-sdk-6.0 -y
 
 COPY ./ ./
 
