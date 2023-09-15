@@ -17,7 +17,7 @@ RUN apt install apt-transport-https -y
 
 RUN apt-get update
 
-RUN sudo apt install dotnet-sdk-7.0 
+RUN apt install dotnet-sdk-7.0 
 
 COPY ./ ./
 
