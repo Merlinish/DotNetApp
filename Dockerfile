@@ -17,12 +17,7 @@ RUN apt install apt-transport-https -y
 
 RUN apt-get update
 
-RUN echo "deb http://security.debian.org/debian-security jessie/updates main" >> /etc/apt/sources.list
-
-RUN apt-get update 
-RUN sudo apt-get install -y --no-install-recommends libssl1.0.0
-
-RUN sudo apt install dotnet-sdk-3.1
+RUN sudo apt install dotnet-sdk-7.0 
 
 COPY ./ ./
 
